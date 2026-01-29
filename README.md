@@ -44,7 +44,7 @@ logs/trading_bot.log
 
 ### Project Structure
 
-````PrimeTrade/
+```PrimeTrade/
 │
 ├── cli.py
 ├── requirements.txt
@@ -52,4 +52,5 @@ logs/trading_bot.log
 │ ├── client.py
 │ ├── orders.py
 │ └── logging_config.py
-└── logs/```
+└── logs/
+```
