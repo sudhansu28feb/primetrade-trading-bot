@@ -53,4 +53,3 @@ logs/trading_bot.log
 │ ├── orders.py
 │ └── logging_config.py
 └── logs/```
-````
