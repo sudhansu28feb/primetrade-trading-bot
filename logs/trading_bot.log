@@ -1,0 +1,46 @@
+2026-01-29 16:52:43,886 | INFO | ORDER REQUEST | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None
+2026-01-29 16:52:44,760 | ERROR | ORDER FAILED
+Traceback (most recent call last):
+  File "C:\Users\Sudhansu\OneDrive\Desktop\PrimeTrade\bot\orders.py", line 16, in place_order
+    order = client.futures_create_order(
+        symbol=symbol, side=side, type="MARKET", quantity=quantity
+    )
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 7867, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 143, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-01-29 16:55:45,476 | INFO | ORDER REQUEST | symbol=BTCUSDT side=BUY type=MARKET qty=0.002 price=None
+2026-01-29 16:55:46,508 | INFO | ORDER RESPONSE | {'orderId': 12022095277, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJf64cf855e365b5c5ec543c', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1769685946433}
+2026-01-29 16:58:10,581 | INFO | ORDER REQUEST | symbol=BTCUSDT side=SELL type=LIMIT qty=0.002 price=65000.0
+2026-01-29 16:58:11,498 | ERROR | ORDER FAILED
+Traceback (most recent call last):
+  File "C:\Users\Sudhansu\OneDrive\Desktop\PrimeTrade\bot\orders.py", line 20, in place_order
+    order = client.futures_create_order(
+        symbol=symbol,
+    ...<4 lines>...
+        timeInForce="GTC",
+    )
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 7867, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 143, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 106, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Sudhansu\AppData\Local\Programs\Python\Python314\Lib\site-packages\binance\client.py", line 115, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-4024): Limit price can't be lower than 83362.60.
+2026-01-29 16:59:05,270 | INFO | ORDER REQUEST | symbol=BTCUSDT side=SELL type=LIMIT qty=0.002 price=84000.0
+2026-01-29 16:59:06,606 | INFO | ORDER RESPONSE | {'orderId': 12022119059, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ7225aa096b29955fa164fa', 'price': '84000.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1769686146571}
+2026-01-29 16:59:35,279 | INFO | ORDER REQUEST | symbol=BTCUSDT side=SELL type=LIMIT qty=0.002 price=84000.0
+2026-01-29 16:59:36,245 | INFO | ORDER RESPONSE | {'orderId': 12022122775, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJae524e2579199b2d9fe97a', 'price': '84000.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1769686176207}
